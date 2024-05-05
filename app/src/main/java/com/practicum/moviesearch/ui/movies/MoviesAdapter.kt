@@ -1,5 +1,6 @@
 package com.practicum.moviesearch.ui.movies
 
+import MovieViewHolder
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.practicum.moviesearch.domain.models.Movie
@@ -17,7 +18,8 @@ class MoviesAdapter(private val clickListener: MovieClickListener) : RecyclerVie
 
     override fun getItemCount(): Int = movies.size
 
-    fun interface MovieClickListener {
+    interface MovieClickListener {
         fun onMovieClick(movie: Movie)
+        fun onFavoriteToggleClick(movie: Movie)
     }
 }

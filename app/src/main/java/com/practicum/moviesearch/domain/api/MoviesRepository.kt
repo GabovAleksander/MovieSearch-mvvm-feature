@@ -5,4 +5,6 @@ import com.practicum.moviesearch.domain.models.Movie
 
 interface MoviesRepository {
     fun searchMovies(expression: String): Resource<List<Movie>>
+    fun addMovieToFavorites(movie: Movie)
+    fun removeMovieFromFavorites(movie: Movie)
 }
